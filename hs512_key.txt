@@ -1,0 +1,5 @@
+comando para generar un key con el método de inccriptación hs512 en la terminal:
+openssl rand -base64 64 > hs512_key.txt
+
+uno de ejemplo:
+uTngY1H/W4kHH+Acznwu1uOeFP4N5lNGh6JcVkgwld8PPVS7kCYfIxwmQDZVvfnNsTWkEQWUgQRX2lH5iQBr8w==
