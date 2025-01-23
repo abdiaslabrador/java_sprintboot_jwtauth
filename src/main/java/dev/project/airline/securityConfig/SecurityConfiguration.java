@@ -70,10 +70,6 @@ public class SecurityConfiguration {
                             .cors(cors -> cors.configurationSource(corsConfiguration()))
                             .csrf(csrf -> csrf.disable())
                             .formLogin(form -> form.disable())
-                            .logout(out -> out
-                                            .logoutUrl(base_url + "/logout")
-                                            .invalidateHttpSession(true)                                            
-                                            .deleteCookies("JSESSIONID"))
                             .authorizeHttpRequests(auth -> auth
                                             .requestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**")).permitAll()
                                             .requestMatchers(base_url + "/login").hasAnyRole("USER", "ADMIN")// principio de mínimos
